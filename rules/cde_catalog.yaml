@@ -1,0 +1,74 @@
+# Synthetic / Illustrative / Non-production Critical Data Element catalog.
+# These definitions exist only for this portfolio project. They are not an
+# organisational CDE inventory and do not represent a real healthcare entity.
+
+cdes:
+  - cde_id: CDE-001
+    data_element: Patient_ID
+    definition: Synthetic unique identifier assigned to a fabricated patient record.
+    domain: Patient
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+    classification: Confidential (synthetic demonstration label)
+    criticality: High
+    source_dataset: patients
+
+  - cde_id: CDE-002
+    data_element: Date_of_Birth
+    definition: Synthetic date of birth used to test date validity and completeness.
+    domain: Patient
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+    classification: Confidential (synthetic demonstration label)
+    criticality: High
+    source_dataset: patients
+
+  - cde_id: CDE-003
+    data_element: Gender
+    definition: Synthetic administrative gender constrained to an approved value set.
+    domain: Patient
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+    classification: Confidential (synthetic demonstration label)
+    criticality: Medium
+    source_dataset: patients
+
+  - cde_id: CDE-004
+    data_element: Facility_ID
+    definition: Synthetic identifier of the facility associated with a record.
+    domain: Facility
+    owner: Chief Data Officer (Synthetic)
+    steward: Facility Reference Data Steward (Synthetic)
+    classification: Internal (synthetic demonstration label)
+    criticality: High
+    source_dataset: patients / encounters / facilities
+
+  - cde_id: CDE-005
+    data_element: Provider_ID
+    definition: Synthetic identifier of the care provider associated with an encounter.
+    domain: Provider
+    owner: Chief Data Officer (Synthetic)
+    steward: Provider Master Data Steward (Synthetic)
+    classification: Internal (synthetic demonstration label)
+    criticality: High
+    source_dataset: providers / encounters
+
+  - cde_id: CDE-006
+    data_element: Encounter_ID
+    definition: Synthetic unique identifier assigned to a fabricated encounter record.
+    domain: Encounter
+    owner: Chief Data Officer (Synthetic)
+    steward: Clinical Data Steward (Synthetic)
+    classification: Confidential (synthetic demonstration label)
+    criticality: High
+    source_dataset: encounters
+
+  - cde_id: CDE-007
+    data_element: Encounter_Date
+    definition: Synthetic date on which a fabricated encounter occurred.
+    domain: Encounter
+    owner: Chief Data Officer (Synthetic)
+    steward: Clinical Data Steward (Synthetic)
+    classification: Confidential (synthetic demonstration label)
+    criticality: Medium
+    source_dataset: encounters

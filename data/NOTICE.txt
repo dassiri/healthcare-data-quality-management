@@ -1,0 +1,4 @@
+SYNTHETIC DATASET. Illustrative and non-production. Contains no real patient, provider, or facility information.
+
+Do not treat these files as real healthcare records.
+Generated with seed=42 as_of=2026-08-20.

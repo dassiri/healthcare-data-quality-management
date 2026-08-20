@@ -1,0 +1,19 @@
+rule_id,rule_name,dimension,data_element,dataset,records_checked,passed,failed,score,severity,cde,owner,steward,snapshot,snapshot_order
+DQ-001,Patient ID Completeness,Completeness,Patient_ID,patients,1020,940,80,92.16,High,CDE-001,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Before Remediation,1
+DQ-002,Patient ID Uniqueness,Uniqueness,Patient_ID,patients,940,820,120,87.23,High,CDE-001,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Before Remediation,1
+DQ-003,Date of Birth Validity,Validity,Date_of_Birth,patients,970,900,70,92.78,High,CDE-002,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Before Remediation,1
+DQ-004,Gender Conformity,Consistency,Gender,patients,1020,925,95,90.69,Medium,CDE-003,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Before Remediation,1
+DQ-005,Facility Referential Integrity,Referential Integrity,Facility_ID,patients,1020,945,75,92.65,High,CDE-004,Chief Data Officer (Synthetic),Facility Reference Data Steward (Synthetic),Before Remediation,1
+DQ-006,Encounter Patient Referential Integrity,Referential Integrity,Patient_ID,encounters,2500,2350,150,94.0,High,CDE-001,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),Before Remediation,1
+DQ-007,Encounter Provider Referential Integrity,Referential Integrity,Provider_ID,encounters,2500,2420,80,96.8,High,CDE-005,Chief Data Officer (Synthetic),Provider Master Data Steward (Synthetic),Before Remediation,1
+DQ-008,Encounter Facility Referential Integrity,Referential Integrity,Facility_ID,encounters,2500,2430,70,97.2,High,CDE-004,Chief Data Officer (Synthetic),Facility Reference Data Steward (Synthetic),Before Remediation,1
+DQ-009,Encounter Date Validity,Validity,Encounter_Date,encounters,2500,2465,35,98.6,Medium,CDE-007,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),Before Remediation,1
+DQ-001,Patient ID Completeness,Completeness,Patient_ID,patients,1001,1001,0,100.0,High,CDE-001,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),After Remediation,2
+DQ-002,Patient ID Uniqueness,Uniqueness,Patient_ID,patients,1001,1001,0,100.0,High,CDE-001,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),After Remediation,2
+DQ-003,Date of Birth Validity,Validity,Date_of_Birth,patients,880,880,0,100.0,High,CDE-002,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),After Remediation,2
+DQ-004,Gender Conformity,Consistency,Gender,patients,1001,1001,0,100.0,Medium,CDE-003,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),After Remediation,2
+DQ-005,Facility Referential Integrity,Referential Integrity,Facility_ID,patients,1001,1001,0,100.0,High,CDE-004,Chief Data Officer (Synthetic),Facility Reference Data Steward (Synthetic),After Remediation,2
+DQ-006,Encounter Patient Referential Integrity,Referential Integrity,Patient_ID,encounters,2500,2500,0,100.0,High,CDE-001,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),After Remediation,2
+DQ-007,Encounter Provider Referential Integrity,Referential Integrity,Provider_ID,encounters,2500,2500,0,100.0,High,CDE-005,Chief Data Officer (Synthetic),Provider Master Data Steward (Synthetic),After Remediation,2
+DQ-008,Encounter Facility Referential Integrity,Referential Integrity,Facility_ID,encounters,2500,2500,0,100.0,High,CDE-004,Chief Data Officer (Synthetic),Facility Reference Data Steward (Synthetic),After Remediation,2
+DQ-009,Encounter Date Validity,Validity,Encounter_Date,encounters,2465,2465,0,100.0,Medium,CDE-007,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),After Remediation,2

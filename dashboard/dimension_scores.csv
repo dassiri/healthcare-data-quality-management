@@ -1,0 +1,11 @@
+dimension,rules,records_checked,passed,failed,score,snapshot,snapshot_order
+Completeness,1,1020,940,80,92.16,Before Remediation,1
+Consistency,1,1020,925,95,90.69,Before Remediation,1
+Referential Integrity,4,8520,8145,375,95.16,Before Remediation,1
+Uniqueness,1,940,820,120,87.23,Before Remediation,1
+Validity,2,3470,3365,105,95.69,Before Remediation,1
+Completeness,1,1001,1001,0,100.0,After Remediation,2
+Consistency,1,1001,1001,0,100.0,After Remediation,2
+Referential Integrity,4,8501,8501,0,100.0,After Remediation,2
+Uniqueness,1,1001,1001,0,100.0,After Remediation,2
+Validity,2,3345,3345,0,100.0,After Remediation,2

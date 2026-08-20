@@ -1,0 +1,41 @@
+Provider_ID,Provider_Name,Specialty,Facility_ID,Dataset_Classification
+PRV-001,SYNTH_PROVIDER_001,General Practice,FAC-001,Synthetic / Illustrative / Non-production
+PRV-002,SYNTH_PROVIDER_002,Cardiology,FAC-002,Synthetic / Illustrative / Non-production
+PRV-003,SYNTH_PROVIDER_003,Paediatrics,FAC-003,Synthetic / Illustrative / Non-production
+PRV-004,SYNTH_PROVIDER_004,Emergency Medicine,FAC-004,Synthetic / Illustrative / Non-production
+PRV-005,SYNTH_PROVIDER_005,Internal Medicine,FAC-005,Synthetic / Illustrative / Non-production
+PRV005,SYNTH_PROVIDER_006,General Practice,FAC-006,Synthetic / Illustrative / Non-production
+PRV-007,SYNTH_PROVIDER_007,Cardiology,FAC-007,Synthetic / Illustrative / Non-production
+PRV-008,SYNTH_PROVIDER_008,Paediatrics,FAC-008,Synthetic / Illustrative / Non-production
+prv-009,SYNTH_PROVIDER_009,Emergency Medicine,FAC-009,Synthetic / Illustrative / Non-production
+PRV-010,SYNTH_PROVIDER_010,Internal Medicine,FAC-010,Synthetic / Illustrative / Non-production
+PRV-011,SYNTH_PROVIDER_011,General Practice,FAC-011,Synthetic / Illustrative / Non-production
+PRV-012,SYNTH_PROVIDER_012,Cardiology,FAC-012,Synthetic / Illustrative / Non-production
+,SYNTH_PROVIDER_013,Paediatrics,FAC-001,Synthetic / Illustrative / Non-production
+PRV-014,SYNTH_PROVIDER_014,Emergency Medicine,FAC-002,Synthetic / Illustrative / Non-production
+PRV-015,SYNTH_PROVIDER_015,Internal Medicine,FAC-003,Synthetic / Illustrative / Non-production
+PRV-016,SYNTH_PROVIDER_016,General Practice,FAC-004,Synthetic / Illustrative / Non-production
+PRV-017,SYNTH_PROVIDER_017,Cardiology,FAC-005,Synthetic / Illustrative / Non-production
+PRV-018,SYNTH_PROVIDER_018,Paediatrics,FAC-006,Synthetic / Illustrative / Non-production
+PRV-019,SYNTH_PROVIDER_019,Emergency Medicine,FAC-007,Synthetic / Illustrative / Non-production
+PRV-020,SYNTH_PROVIDER_020,Internal Medicine,FAC-008,Synthetic / Illustrative / Non-production
+PRV-021,SYNTH_PROVIDER_021,General Practice,FAC-99,Synthetic / Illustrative / Non-production
+PRV-022,SYNTH_PROVIDER_022,Cardiology,FAC-010,Synthetic / Illustrative / Non-production
+PRV-023,SYNTH_PROVIDER_023,Paediatrics,FAC-011,Synthetic / Illustrative / Non-production
+PRV-024,SYNTH_PROVIDER_024,Emergency Medicine,FAC-012,Synthetic / Illustrative / Non-production
+PRV-025,SYNTH_PROVIDER_025,Internal Medicine,FAC-001,Synthetic / Illustrative / Non-production
+PRV-026,SYNTH_PROVIDER_026,General Practice,FAC-002,Synthetic / Illustrative / Non-production
+PRV-027,SYNTH_PROVIDER_027,Cardiology,FAC-003,Synthetic / Illustrative / Non-production
+PRV-028,SYNTH_PROVIDER_028,Paediatrics,FAC-004,Synthetic / Illustrative / Non-production
+PRV-029,SYNTH_PROVIDER_029,Emergency Medicine,FAC-005,Synthetic / Illustrative / Non-production
+PRV-030,SYNTH_PROVIDER_030,Internal Medicine,FAC-006,Synthetic / Illustrative / Non-production
+PRV-031,SYNTH_PROVIDER_031,General Practice,FAC-007,Synthetic / Illustrative / Non-production
+PRV-032,SYNTH_PROVIDER_032,Cardiology,FAC-008,Synthetic / Illustrative / Non-production
+PRV-033,SYNTH_PROVIDER_033,Paediatrics,FAC-009,Synthetic / Illustrative / Non-production
+PRV-034,SYNTH_PROVIDER_034,Emergency Medicine,FAC-010,Synthetic / Illustrative / Non-production
+PRV-035,SYNTH_PROVIDER_035,Internal Medicine,FAC-011,Synthetic / Illustrative / Non-production
+PRV-036,SYNTH_PROVIDER_036,General Practice,FAC-012,Synthetic / Illustrative / Non-production
+PRV-037,SYNTH_PROVIDER_037,Cardiology,FAC-001,Synthetic / Illustrative / Non-production
+PRV-038,SYNTH_PROVIDER_038,Paediatrics,FAC-002,Synthetic / Illustrative / Non-production
+PRV-039,SYNTH_PROVIDER_039,Emergency Medicine,FAC-003,Synthetic / Illustrative / Non-production
+PRV-040,SYNTH_PROVIDER_040,Internal Medicine,FAC-004,Synthetic / Illustrative / Non-production

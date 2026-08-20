@@ -1,0 +1,9 @@
+dataset,column,datatype,row_count,null_count,completeness_pct,unique_count,uniqueness_pct,duplicate_count,min,max,invalid_values,top_values
+patients,Patient_ID,string,1020,80,92.16,880,93.62,60,  PAT-000108  ,pat-000972,,PAT-000001 (2); PAT-000262 (2); PAT-000957 (2); PAT-000181 (2); PAT-000020 (2)
+patients,Given_Name,string,1020,0,100.0,1000,98.04,20,SYNTH_GIVEN_000001,SYNTH_GIVEN_001000,,SYNTH_GIVEN_000020 (2); SYNTH_GIVEN_000023 (2); SYNTH_GIVEN_000025 (2); SYNTH_GIVEN_000043 (2); SYNTH_GIVEN_000085 (2)
+patients,Family_Name,string,1020,0,100.0,1000,98.04,20,SYNTH_FAMILY_000001,SYNTH_FAMILY_001000,,SYNTH_FAMILY_000020 (2); SYNTH_FAMILY_000023 (2); SYNTH_FAMILY_000025 (2); SYNTH_FAMILY_000043 (2); SYNTH_FAMILY_000085 (2)
+patients,Date_of_Birth,string,1020,50,95.1,863,88.97,107,1850-01-01,2028-03-15,80,2028-03-15 (25); 1850-01-01 (15); 32/13/1990 (6); 1990-13-40 (6); not-a-date (6)
+patients,Gender,string,1020,46,95.49,10,1.03,964,F,male,95,Female (444); Male (437); Unknown (44); X (7); FEMALE (7)
+patients,Facility_ID,string,1020,43,95.78,16,1.64,961,FAC-000,fac-1,,FAC-003 (103); FAC-007 (86); FAC-010 (84); FAC-005 (84); FAC-012 (82)
+patients,Registration_Date,string,1020,0,100.0,781,76.57,239,2021-02-28,2026-07-18,0,2025-02-27 (4); 2024-09-22 (4); 2022-06-07 (4); 2021-12-19 (4); 2022-01-03 (3)
+patients,Dataset_Classification,string,1020,0,100.0,1,0.1,1019,Synthetic / Illustrative / Non-production,Synthetic / Illustrative / Non-production,,Synthetic / Illustrative / Non-production (1020)

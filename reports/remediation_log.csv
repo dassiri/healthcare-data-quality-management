@@ -1,0 +1,821 @@
+action_id,dataset,record_key,data_element,action,before_value,after_value,rationale
+REM-00001,facilities,FAC-UNK,Facility_ID,referential_repair,,FAC-UNK,Added Unknown facility placeholder so unmatched Facility_ID values can be repaired without silent deletion.
+REM-00002,facilities,ALL,Facility_ID,standardization,inconsistent raw formatting,facility master values,Raw facility file is replaced by the reference master for processed output.
+REM-00003,facilities,ALL,Facility_Type,standardization,inconsistent raw formatting,facility master values,Raw facility file is replaced by the reference master for processed output.
+REM-00004,providers,PRV-UNK,Provider_ID,referential_repair,,PRV-UNK,Added Unknown provider placeholder for unmatched encounter provider references.
+REM-00005,providers,PRV-005,Provider_ID,standardization,PRV005,PRV-005,Normalised provider identifier to PRV-NNN.
+REM-00006,providers,PRV-009,Provider_ID,standardization,prv-009,PRV-009,Normalised provider identifier to PRV-NNN.
+REM-00007,providers,12,Provider_ID,missing_value_handling,,PRV-901,Assigned a new synthetic provider identifier for a blank or unparseable value.
+REM-00008,providers,PRV-021,Facility_ID,referential_repair,FAC-99,FAC-UNK,Unmatched provider facility reference assigned to Unknown facility.
+REM-00009,patients,PAT-000006,Patient_ID,standardization,pat-000006,PAT-000006,Normalised Patient_ID to PAT-NNNNNN.
+REM-00010,patients,PAT-000008,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00011,patients,8,Patient_ID,missing_value_handling,,PAT-800001,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00012,patients,PAT-000021,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00013,patients,23,Patient_ID,missing_value_handling,,PAT-800002,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00014,patients,PAT-000028,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00015,patients,PAT-000031,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00016,patients,PAT-000032,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00017,patients,PAT-000036,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00018,patients,36,Patient_ID,missing_value_handling,,PAT-800003,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00019,patients,PAT-000038,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00020,patients,PAT-000039,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00021,patients,PAT-000040,Patient_ID,standardization,PAT000040,PAT-000040,Normalised Patient_ID to PAT-NNNNNN.
+REM-00022,patients,PAT-000045,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00023,patients,PAT-000046,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00024,patients,47,Patient_ID,missing_value_handling,,PAT-800004,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00025,patients,PAT-000051,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00026,patients,51,Patient_ID,missing_value_handling,,PAT-800005,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00027,patients,PAT-000058,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00028,patients,PAT-000059,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00029,patients,PAT-000060,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00030,patients,PAT-000063,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00031,patients,63,Patient_ID,missing_value_handling,,PAT-800006,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00032,patients,65,Patient_ID,missing_value_handling,,PAT-800007,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00033,patients,PAT-000072,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00034,patients,PAT-000073,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00035,patients,PAT-000074,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00036,patients,PAT-000076,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00037,patients,PAT-000082,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00038,patients,PAT-000084,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00039,patients,PAT-000086,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00040,patients,86,Patient_ID,missing_value_handling,,PAT-800008,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00041,patients,PAT-000088,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00042,patients,PAT-000089,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00043,patients,PAT-000092,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00044,patients,93,Patient_ID,missing_value_handling,,PAT-800009,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00045,patients,PAT-000095,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00046,patients,PAT-000097,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00047,patients,98,Patient_ID,missing_value_handling,,PAT-800010,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00048,patients,PAT-000103,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00049,patients,PAT-000104,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00050,patients,PAT-000107,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00051,patients,108,Patient_ID,missing_value_handling,,PAT-800011,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00052,patients,110,Patient_ID,missing_value_handling,,PAT-800012,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00053,patients,PAT-000113,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00054,patients,PAT-000114,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00055,patients,117,Patient_ID,missing_value_handling,,PAT-800013,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00056,patients,118,Patient_ID,missing_value_handling,,PAT-800014,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00057,patients,122,Patient_ID,missing_value_handling,,PAT-800015,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00058,patients,PAT-000124,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00059,patients,PAT-000125,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00060,patients,PAT-000128,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00061,patients,PAT-000129,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00062,patients,PAT-000130,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00063,patients,PAT-000131,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00064,patients,136,Patient_ID,missing_value_handling,,PAT-800016,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00065,patients,PAT-000140,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00066,patients,PAT-000142,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00067,patients,142,Patient_ID,missing_value_handling,,PAT-800017,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00068,patients,PAT-000144,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00069,patients,PAT-000145,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00070,patients,PAT-000148,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00071,patients,PAT-000149,Patient_ID,standardization,pat-000149,PAT-000149,Normalised Patient_ID to PAT-NNNNNN.
+REM-00072,patients,PAT-000151,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00073,patients,PAT-000154,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00074,patients,PAT-000156,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00075,patients,PAT-000158,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00076,patients,PAT-000159,Patient_ID,standardization,Pat-000159,PAT-000159,Normalised Patient_ID to PAT-NNNNNN.
+REM-00077,patients,PAT-000160,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00078,patients,PAT-000161,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00079,patients,PAT-000162,Patient_ID,standardization,pat-000162,PAT-000162,Normalised Patient_ID to PAT-NNNNNN.
+REM-00080,patients,PAT-000163,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00081,patients,PAT-000166,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00082,patients,PAT-000168,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00083,patients,PAT-000169,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00084,patients,170,Patient_ID,missing_value_handling,,PAT-800018,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00085,patients,PAT-000175,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00086,patients,PAT-000177,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00087,patients,PAT-000179,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00088,patients,PAT-000180,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00089,patients,PAT-000186,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00090,patients,PAT-000190,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00091,patients,PAT-000193,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00092,patients,PAT-000196,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00093,patients,PAT-000198,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00094,patients,198,Patient_ID,missing_value_handling,,PAT-800019,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00095,patients,PAT-000201,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00096,patients,201,Patient_ID,missing_value_handling,,PAT-800020,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00097,patients,PAT-000203,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00098,patients,PAT-000205,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00099,patients,PAT-000207,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00100,patients,PAT-000209,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00101,patients,209,Patient_ID,missing_value_handling,,PAT-800021,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00102,patients,210,Patient_ID,missing_value_handling,,PAT-800022,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00103,patients,PAT-000212,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00104,patients,PAT-000219,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00105,patients,222,Patient_ID,missing_value_handling,,PAT-800023,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00106,patients,PAT-000227,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00107,patients,229,Patient_ID,missing_value_handling,,PAT-800024,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00108,patients,PAT-000235,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00109,patients,PAT-000236,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00110,patients,PAT-000237,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00111,patients,237,Patient_ID,missing_value_handling,,PAT-800025,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00112,patients,PAT-000239,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00113,patients,PAT-000244,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00114,patients,PAT-000245,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00115,patients,245,Patient_ID,missing_value_handling,,PAT-800026,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00116,patients,PAT-000255,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00117,patients,PAT-000256,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00118,patients,PAT-000260,Patient_ID,standardization,PAT000260,PAT-000260,Normalised Patient_ID to PAT-NNNNNN.
+REM-00119,patients,PAT-000267,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00120,patients,PAT-000272,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00121,patients,PAT-000276,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00122,patients,PAT-000277,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00123,patients,277,Patient_ID,missing_value_handling,,PAT-800027,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00124,patients,PAT-000279,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00125,patients,PAT-000283,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00126,patients,PAT-000284,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00127,patients,284,Patient_ID,missing_value_handling,,PAT-800028,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00128,patients,PAT-000287,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00129,patients,PAT-000291,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00130,patients,PAT-000293,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00131,patients,PAT-000294,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00132,patients,PAT-000295,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00133,patients,PAT-000296,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00134,patients,297,Patient_ID,missing_value_handling,,PAT-800029,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00135,patients,PAT-000300,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00136,patients,PAT-000303,Patient_ID,standardization,PAT000303,PAT-000303,Normalised Patient_ID to PAT-NNNNNN.
+REM-00137,patients,PAT-000305,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00138,patients,PAT-000307,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00139,patients,PAT-000309,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00140,patients,PAT-000315,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00141,patients,PAT-000316,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00142,patients,316,Patient_ID,missing_value_handling,,PAT-800030,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00143,patients,319,Patient_ID,missing_value_handling,,PAT-800031,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00144,patients,PAT-000321,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00145,patients,PAT-000323,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00146,patients,PAT-000326,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00147,patients,PAT-000327,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00148,patients,PAT-000331,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00149,patients,PAT-000332,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00150,patients,PAT-000333,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00151,patients,PAT-000334,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00152,patients,335,Patient_ID,missing_value_handling,,PAT-800032,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00153,patients,PAT-000339,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00154,patients,PAT-000341,Patient_ID,standardization,Pat-000341,PAT-000341,Normalised Patient_ID to PAT-NNNNNN.
+REM-00155,patients,PAT-000342,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00156,patients,PAT-000344,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00157,patients,PAT-000346,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00158,patients,PAT-000347,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00159,patients,PAT-000349,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00160,patients,PAT-000350,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00161,patients,353,Patient_ID,missing_value_handling,,PAT-800033,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00162,patients,354,Patient_ID,missing_value_handling,,PAT-800034,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00163,patients,PAT-000357,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00164,patients,357,Patient_ID,missing_value_handling,,PAT-800035,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00165,patients,PAT-000360,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00166,patients,PAT-000362,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00167,patients,PAT-000364,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00168,patients,PAT-000366,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00169,patients,PAT-000367,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00170,patients,PAT-000368,Patient_ID,standardization,PAT000368,PAT-000368,Normalised Patient_ID to PAT-NNNNNN.
+REM-00171,patients,PAT-000377,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00172,patients,383,Patient_ID,missing_value_handling,,PAT-800036,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00173,patients,PAT-000386,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00174,patients,PAT-000387,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00175,patients,387,Patient_ID,missing_value_handling,,PAT-800037,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00176,patients,PAT-000393,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00177,patients,PAT-000395,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00178,patients,PAT-000397,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00179,patients,PAT-000399,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00180,patients,PAT-000403,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00181,patients,PAT-000409,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00182,patients,PAT-000411,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00183,patients,PAT-000412,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00184,patients,PAT-000418,Patient_ID,standardization,Pat-000418,PAT-000418,Normalised Patient_ID to PAT-NNNNNN.
+REM-00185,patients,419,Patient_ID,missing_value_handling,,PAT-800038,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00186,patients,426,Patient_ID,missing_value_handling,,PAT-800039,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00187,patients,PAT-000428,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00188,patients,PAT-000430,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00189,patients,PAT-000432,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00190,patients,PAT-000436,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00191,patients,PAT-000441,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00192,patients,PAT-000443,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00193,patients,PAT-000452,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00194,patients,PAT-000453,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00195,patients,PAT-000456,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00196,patients,PAT-000457,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00197,patients,PAT-000458,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00198,patients,PAT-000459,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00199,patients,PAT-000460,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00200,patients,PAT-000469,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00201,patients,469,Patient_ID,missing_value_handling,,PAT-800040,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00202,patients,PAT-000471,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00203,patients,PAT-000472,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00204,patients,474,Patient_ID,missing_value_handling,,PAT-800041,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00205,patients,PAT-000477,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00206,patients,PAT-000478,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00207,patients,PAT-000479,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00208,patients,485,Patient_ID,missing_value_handling,,PAT-800042,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00209,patients,PAT-000488,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00210,patients,PAT-000489,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00211,patients,PAT-000490,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00212,patients,PAT-000491,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00213,patients,PAT-000495,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00214,patients,PAT-000496,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00215,patients,PAT-000497,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00216,patients,PAT-000500,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00217,patients,PAT-000502,Patient_ID,standardization,Pat-000502,PAT-000502,Normalised Patient_ID to PAT-NNNNNN.
+REM-00218,patients,PAT-000503,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00219,patients,503,Patient_ID,missing_value_handling,,PAT-800043,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00220,patients,PAT-000505,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00221,patients,PAT-000508,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00222,patients,PAT-000513,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00223,patients,PAT-000514,Gender,correction,X,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00224,patients,PAT-000516,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00225,patients,516,Patient_ID,missing_value_handling,,PAT-800044,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00226,patients,PAT-000518,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00227,patients,PAT-000519,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00228,patients,PAT-000528,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00229,patients,528,Patient_ID,missing_value_handling,,PAT-800045,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00230,patients,PAT-000538,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00231,patients,PAT-000539,Date_of_Birth,correction,not-a-date,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00232,patients,PAT-000540,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00233,patients,PAT-000541,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00234,patients,544,Patient_ID,missing_value_handling,,PAT-800046,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00235,patients,PAT-000547,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00236,patients,PAT-000548,Patient_ID,standardization,Pat-000548,PAT-000548,Normalised Patient_ID to PAT-NNNNNN.
+REM-00237,patients,PAT-000550,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00238,patients,PAT-000552,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00239,patients,PAT-000554,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00240,patients,PAT-000556,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00241,patients,PAT-000557,Patient_ID,standardization,PAT000557,PAT-000557,Normalised Patient_ID to PAT-NNNNNN.
+REM-00242,patients,558,Patient_ID,missing_value_handling,,PAT-800047,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00243,patients,PAT-000563,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00244,patients,PAT-000564,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00245,patients,PAT-000567,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00246,patients,PAT-000569,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00247,patients,PAT-000574,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00248,patients,574,Patient_ID,missing_value_handling,,PAT-800048,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00249,patients,PAT-000577,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00250,patients,PAT-000582,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00251,patients,PAT-000586,Patient_ID,standardization,Pat-000586,PAT-000586,Normalised Patient_ID to PAT-NNNNNN.
+REM-00252,patients,PAT-000587,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00253,patients,PAT-000589,Patient_ID,standardization,pat-000589,PAT-000589,Normalised Patient_ID to PAT-NNNNNN.
+REM-00254,patients,PAT-000596,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00255,patients,PAT-000598,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00256,patients,PAT-000599,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00257,patients,PAT-000601,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00258,patients,PAT-000603,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00259,patients,606,Patient_ID,missing_value_handling,,PAT-800049,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00260,patients,PAT-000608,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00261,patients,PAT-000610,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00262,patients,610,Patient_ID,missing_value_handling,,PAT-800050,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00263,patients,PAT-000616,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00264,patients,618,Patient_ID,missing_value_handling,,PAT-800051,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00265,patients,PAT-000622,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00266,patients,PAT-000623,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00267,patients,PAT-000630,Gender,standardization,M,Male,Mapped gender synonym onto the approved value set.
+REM-00268,patients,630,Patient_ID,missing_value_handling,,PAT-800052,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00269,patients,635,Patient_ID,missing_value_handling,,PAT-800053,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00270,patients,638,Patient_ID,missing_value_handling,,PAT-800054,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00271,patients,639,Patient_ID,missing_value_handling,,PAT-800055,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00272,patients,PAT-000643,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00273,patients,PAT-000644,Patient_ID,standardization,PAT000644,PAT-000644,Normalised Patient_ID to PAT-NNNNNN.
+REM-00274,patients,PAT-000646,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00275,patients,PAT-000647,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00276,patients,PAT-000654,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00277,patients,PAT-000657,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00278,patients,657,Patient_ID,missing_value_handling,,PAT-800056,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00279,patients,PAT-000659,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00280,patients,PAT-000664,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00281,patients,PAT-000667,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00282,patients,PAT-000669,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00283,patients,PAT-000673,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00284,patients,PAT-000675,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00285,patients,PAT-000676,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00286,patients,676,Patient_ID,missing_value_handling,,PAT-800057,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00287,patients,677,Patient_ID,missing_value_handling,,PAT-800058,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00288,patients,678,Patient_ID,missing_value_handling,,PAT-800059,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00289,patients,PAT-000680,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00290,patients,PAT-000681,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00291,patients,PAT-000685,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00292,patients,PAT-000686,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00293,patients,PAT-000690,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00294,patients,PAT-000691,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00295,patients,PAT-000692,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00296,patients,693,Patient_ID,missing_value_handling,,PAT-800060,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00297,patients,PAT-000696,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00298,patients,PAT-000703,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00299,patients,PAT-000705,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00300,patients,706,Patient_ID,missing_value_handling,,PAT-800061,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00301,patients,PAT-000709,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00302,patients,716,Patient_ID,missing_value_handling,,PAT-800062,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00303,patients,PAT-000729,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00304,patients,PAT-000732,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00305,patients,PAT-000735,Facility_ID,standardization,fac-1,FAC-001,Normalised Facility_ID to FAC-NNN.
+REM-00306,patients,PAT-000736,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00307,patients,PAT-000737,Patient_ID,standardization,PAT000737,PAT-000737,Normalised Patient_ID to PAT-NNNNNN.
+REM-00308,patients,PAT-000740,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00309,patients,PAT-000741,Patient_ID,standardization,pat-000741,PAT-000741,Normalised Patient_ID to PAT-NNNNNN.
+REM-00310,patients,PAT-000743,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00311,patients,PAT-000752,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00312,patients,759,Patient_ID,missing_value_handling,,PAT-800063,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00313,patients,PAT-000762,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00314,patients,PAT-000764,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00315,patients,766,Patient_ID,missing_value_handling,,PAT-800064,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00316,patients,PAT-000768,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00317,patients,PAT-000770,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00318,patients,PAT-000771,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00319,patients,PAT-000772,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00320,patients,PAT-000774,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00321,patients,PAT-000775,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00322,patients,775,Patient_ID,missing_value_handling,,PAT-800065,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00323,patients,PAT-000780,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00324,patients,PAT-000781,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00325,patients,781,Patient_ID,missing_value_handling,,PAT-800066,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00326,patients,782,Patient_ID,missing_value_handling,,PAT-800067,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00327,patients,PAT-000786,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00328,patients,PAT-000787,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00329,patients,PAT-000789,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00330,patients,791,Patient_ID,missing_value_handling,,PAT-800068,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00331,patients,792,Patient_ID,missing_value_handling,,PAT-800069,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00332,patients,PAT-000794,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00333,patients,PAT-000803,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00334,patients,PAT-000804,Date_of_Birth,correction,1990-13-40,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00335,patients,PAT-000805,Patient_ID,standardization,pat-000805,PAT-000805,Normalised Patient_ID to PAT-NNNNNN.
+REM-00336,patients,PAT-000806,Gender,standardization,FEMALE,Female,Mapped gender synonym onto the approved value set.
+REM-00337,patients,PAT-000813,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00338,patients,815,Patient_ID,missing_value_handling,,PAT-800070,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00339,patients,PAT-000818,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00340,patients,PAT-000822,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00341,patients,PAT-000823,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00342,patients,PAT-000824,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00343,patients,PAT-000830,Patient_ID,standardization,Pat-000830,PAT-000830,Normalised Patient_ID to PAT-NNNNNN.
+REM-00344,patients,PAT-000835,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00345,patients,835,Patient_ID,missing_value_handling,,PAT-800071,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00346,patients,PAT-000838,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00347,patients,PAT-000840,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00348,patients,PAT-000841,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00349,patients,PAT-000844,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00350,patients,PAT-000845,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00351,patients,PAT-000847,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00352,patients,PAT-000852,Date_of_Birth,correction,31-Feb-1985,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00353,patients,PAT-000853,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00354,patients,PAT-000856,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00355,patients,PAT-000863,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00356,patients,PAT-000864,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00357,patients,PAT-000866,Patient_ID,standardization,pat-000866,PAT-000866,Normalised Patient_ID to PAT-NNNNNN.
+REM-00358,patients,PAT-000876,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00359,patients,PAT-000878,Patient_ID,standardization,PAT000878,PAT-000878,Normalised Patient_ID to PAT-NNNNNN.
+REM-00360,patients,PAT-000879,Gender,standardization,U,Unknown,Mapped gender synonym onto the approved value set.
+REM-00361,patients,879,Patient_ID,missing_value_handling,,PAT-800072,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00362,patients,883,Patient_ID,missing_value_handling,,PAT-800073,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00363,patients,PAT-000885,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00364,patients,PAT-000890,Gender,standardization,male,Male,Mapped gender synonym onto the approved value set.
+REM-00365,patients,PAT-000892,Patient_ID,standardization,PAT000892,PAT-000892,Normalised Patient_ID to PAT-NNNNNN.
+REM-00366,patients,PAT-000901,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00367,patients,PAT-000903,Date_of_Birth,correction,01-99-2010,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00368,patients,PAT-000905,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00369,patients,PAT-000906,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00370,patients,PAT-000908,Gender,standardization,F,Female,Mapped gender synonym onto the approved value set.
+REM-00371,patients,PAT-000909,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00372,patients,911,Patient_ID,missing_value_handling,,PAT-800074,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00373,patients,PAT-000913,Facility_ID,referential_repair,FAC99,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00374,patients,PAT-000915,Gender,correction,Other,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00375,patients,PAT-000916,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00376,patients,PAT-000921,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00377,patients,PAT-000922,Patient_ID,standardization,Pat-000922,PAT-000922,Normalised Patient_ID to PAT-NNNNNN.
+REM-00378,patients,926,Patient_ID,missing_value_handling,,PAT-800075,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00379,patients,PAT-000930,Date_of_Birth,correction,1850-01-01,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00380,patients,PAT-000932,Patient_ID,standardization,pat-000932,PAT-000932,Normalised Patient_ID to PAT-NNNNNN.
+REM-00381,patients,PAT-000935,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00382,patients,PAT-000939,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00383,patients,PAT-000940,Date_of_Birth,correction,32/13/1990,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00384,patients,PAT-000945,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00385,patients,PAT-000947,Facility_ID,referential_repair,FAC-000,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00386,patients,PAT-000953,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00387,patients,PAT-000955,Facility_ID,referential_repair,FAC-999,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00388,patients,PAT-000956,Date_of_Birth,correction,2028-03-15,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00389,patients,958,Patient_ID,missing_value_handling,,PAT-800076,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00390,patients,PAT-000960,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00391,patients,PAT-000965,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00392,patients,PAT-000966,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00393,patients,969,Patient_ID,missing_value_handling,,PAT-800077,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00394,patients,PAT-000972,Patient_ID,standardization,pat-000972,PAT-000972,Normalised Patient_ID to PAT-NNNNNN.
+REM-00395,patients,PAT-000975,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00396,patients,PAT-000978,Gender,correction, ,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00397,patients,978,Patient_ID,missing_value_handling,,PAT-800078,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00398,patients,PAT-000983,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00399,patients,PAT-000985,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00400,patients,PAT-000989,Date_of_Birth,correction,,,"Unparseable, future, or out-of-range date cleared. No source system exists to impute a replacement."
+REM-00401,patients,992,Patient_ID,missing_value_handling,,PAT-800079,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00402,patients,993,Patient_ID,missing_value_handling,,PAT-800080,Assigned a new synthetic Patient_ID for a blank identifier. The original row was retained.
+REM-00403,patients,PAT-000996,Gender,correction,,Unknown,Value not in the approved set; defaulted to Unknown.
+REM-00404,patients,PAT-000997,Facility_ID,referential_repair,,FAC-UNK,Missing or invalid facility reference assigned to Unknown facility.
+REM-00405,patients,PAT-000020,Patient_ID,deduplication,PAT-000020,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00406,patients,PAT-000807,Patient_ID,deduplication,PAT-000807,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00407,patients,PAT-000871,Patient_ID,deduplication,PAT-000871,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00408,patients,PAT-000043,Patient_ID,deduplication,PAT-000043,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00409,patients,PAT-000085,Patient_ID,deduplication,PAT-000085,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00410,patients,PAT-000380,Patient_ID,deduplication,PAT-000380,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00411,patients,PAT-000023,Patient_ID,deduplication,PAT-000023,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00412,patients,PAT-000704,Patient_ID,deduplication,PAT-000704,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00413,patients,PAT-000306,Patient_ID,deduplication,PAT-000306,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00414,patients,PAT-000889,Patient_ID,deduplication,PAT-000889,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00415,patients,PAT-000750,Patient_ID,deduplication,PAT-000750,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00416,patients,PAT-000987,Patient_ID,deduplication,PAT-000987,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00417,patients,PAT-000684,Patient_ID,deduplication,PAT-000684,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00418,patients,PAT-000150,Patient_ID,deduplication,PAT-000150,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00419,patients,PAT-000555,Patient_ID,deduplication,PAT-000555,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00420,patients,PAT-000363,Patient_ID,deduplication,PAT-000363,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00421,patients,PAT-000699,Patient_ID,deduplication,PAT-000699,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00422,patients,PAT-000561,Patient_ID,deduplication,PAT-000561,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00423,patients,PAT-000777,Patient_ID,deduplication,PAT-000777,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00424,patients,PAT-000025,Patient_ID,deduplication,PAT-000025,ROW_REMOVED,Removed an exact duplicate patient row. The first copy was retained.
+REM-00425,patients,PAT-000001,Patient_ID,deduplication,PAT-000001,PAT-700002,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00426,patients,PAT-000068,Patient_ID,deduplication,PAT-000068,PAT-700069,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00427,patients,PAT-000091,Patient_ID,deduplication,PAT-000091,PAT-700092,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00428,patients,PAT-000096,Patient_ID,deduplication,PAT-000096,PAT-700097,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00429,patients,PAT-000122,Patient_ID,deduplication,PAT-000122,PAT-700123,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00430,patients,PAT-000135,Patient_ID,deduplication,PAT-000135,PAT-700136,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00431,patients,PAT-000170,Patient_ID,deduplication,PAT-000170,PAT-700171,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00432,patients,PAT-000181,Patient_ID,deduplication,PAT-000181,PAT-700182,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00433,patients,PAT-000226,Patient_ID,deduplication,PAT-000226,PAT-700227,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00434,patients,PAT-000247,Patient_ID,deduplication,PAT-000247,PAT-700248,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00435,patients,PAT-000257,Patient_ID,deduplication,PAT-000257,PAT-700258,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00436,patients,PAT-000262,Patient_ID,deduplication,PAT-000262,PAT-700263,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00437,patients,PAT-000302,Patient_ID,deduplication,PAT-000302,PAT-700303,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00438,patients,PAT-000337,Patient_ID,deduplication,PAT-000337,PAT-700338,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00439,patients,PAT-000338,Patient_ID,deduplication,PAT-000338,PAT-700339,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00440,patients,PAT-000365,Patient_ID,deduplication,PAT-000365,PAT-700366,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00441,patients,PAT-000378,Patient_ID,deduplication,PAT-000378,PAT-700379,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00442,patients,PAT-000381,Patient_ID,deduplication,PAT-000381,PAT-700382,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00443,patients,PAT-000417,Patient_ID,deduplication,PAT-000417,PAT-700418,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00444,patients,PAT-000449,Patient_ID,deduplication,PAT-000449,PAT-700450,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00445,patients,PAT-000461,Patient_ID,deduplication,PAT-000461,PAT-700462,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00446,patients,PAT-000483,Patient_ID,deduplication,PAT-000483,PAT-700484,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00447,patients,PAT-000492,Patient_ID,deduplication,PAT-000492,PAT-700493,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00448,patients,PAT-000510,Patient_ID,deduplication,PAT-000510,PAT-700511,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00449,patients,PAT-000625,Patient_ID,deduplication,PAT-000625,PAT-700626,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00450,patients,PAT-000687,Patient_ID,deduplication,PAT-000687,PAT-700688,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00451,patients,PAT-000744,Patient_ID,deduplication,PAT-000744,PAT-700745,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00452,patients,PAT-000765,Patient_ID,deduplication,PAT-000765,PAT-700766,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00453,patients,PAT-000815,Patient_ID,deduplication,PAT-000815,PAT-700816,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00454,patients,PAT-000820,Patient_ID,deduplication,PAT-000820,PAT-700821,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00455,patients,PAT-000831,Patient_ID,deduplication,PAT-000831,PAT-700832,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00456,patients,PAT-000832,Patient_ID,deduplication,PAT-000832,PAT-700833,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00457,patients,PAT-000837,Patient_ID,deduplication,PAT-000837,PAT-700838,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00458,patients,PAT-000867,Patient_ID,deduplication,PAT-000867,PAT-700868,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00459,patients,PAT-000891,Patient_ID,deduplication,PAT-000891,PAT-700892,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00460,patients,PAT-000894,Patient_ID,deduplication,PAT-000894,PAT-700895,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00461,patients,PAT-000895,Patient_ID,deduplication,PAT-000895,PAT-700896,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00462,patients,PAT-000904,Patient_ID,deduplication,PAT-000904,PAT-700905,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00463,patients,PAT-000957,Patient_ID,deduplication,PAT-000957,PAT-700958,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00464,patients,PAT-000999,Patient_ID,deduplication,PAT-000999,PAT-701000,Same Patient_ID on non-identical rows treated as a conflicting identity. Survivor kept the original ID; others received a new synthetic ID.
+REM-00465,patients,ALL,Patient_ID,deduplication,1020,1000,Patient row count after exact-duplicate removal and conflicting-ID split.
+REM-00466,encounters,ENC-0000007,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00467,encounters,ENC-0000010,Provider_ID,referential_repair,PRV-941,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00468,encounters,ENC-0000017,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00469,encounters,ENC-0000019,Provider_ID,referential_repair,PRV-902,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00470,encounters,ENC-0000028,Patient_ID,referential_repair,PAT-900014,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00471,encounters,ENC-0000032,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00472,encounters,ENC-0000035,Provider_ID,referential_repair,PRV-915,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00473,encounters,ENC-0000038,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00474,encounters,ENC-0000039,Provider_ID,referential_repair,PRV-903,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00475,encounters,ENC-0000040,Patient_ID,referential_repair,PAT-900002,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00476,encounters,ENC-0000042,Provider_ID,referential_repair,PRV-913,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00477,encounters,ENC-0000052,Patient_ID,referential_repair,PAT-900017,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00478,encounters,ENC-0000056,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00479,encounters,ENC-0000075,Provider_ID,referential_repair,PRV-918,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00480,encounters,ENC-0000079,Patient_ID,referential_repair,PAT-900007,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00481,encounters,ENC-0000084,Encounter_Date,correction,not-a-date,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00482,encounters,97,Encounter_ID,missing_value_handling,,ENC-9000001,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00483,encounters,ENC-0000106,Patient_ID,referential_repair,PAT-900106,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00484,encounters,ENC-0000111,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00485,encounters,ENC-0000115,Patient_ID,referential_repair,PAT-900039,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00486,encounters,ENC-0000123,Patient_ID,referential_repair,PAT-900005,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00487,encounters,ENC-0000136,Patient_ID,referential_repair,PAT-900076,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00488,encounters,ENC-0000151,Patient_ID,referential_repair,PAT-900048,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00489,encounters,ENC-0000158,Patient_ID,referential_repair,PAT-900028,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00490,encounters,ENC-0000161,Provider_ID,referential_repair,PRV-911,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00491,encounters,ENC-0000168,Encounter_Date,correction,13/40/2024,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00492,encounters,ENC-0000169,Patient_ID,referential_repair,PAT-900073,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00493,encounters,ENC-0000171,Patient_ID,referential_repair,PAT-900116,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00494,encounters,ENC-0000180,Provider_ID,referential_repair,PRV-927,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00495,encounters,ENC-0000183,Provider_ID,referential_repair,PRV-924,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00496,encounters,ENC-0000185,Provider_ID,referential_repair,PRV-920,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00497,encounters,ENC-0000192,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00498,encounters,ENC-0000194,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00499,encounters,ENC-0000199,Provider_ID,referential_repair,PRV-948,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00500,encounters,ENC-0000209,Encounter_ID,deduplication,ENC-0000209,ENC-9000002,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00501,encounters,ENC-0000211,Patient_ID,referential_repair,PAT-900026,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00502,encounters,ENC-0000216,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00503,encounters,ENC-0000219,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00504,encounters,231,Encounter_ID,missing_value_handling,,ENC-9000003,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00505,encounters,ENC-0000235,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00506,encounters,ENC-0000240,Patient_ID,referential_repair,PAT-900060,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00507,encounters,ENC-0000253,Provider_ID,referential_repair,PRV-903,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00508,encounters,259,Encounter_ID,missing_value_handling,,ENC-9000004,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00509,encounters,261,Encounter_ID,missing_value_handling,,ENC-9000005,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00510,encounters,ENC-0000269,Provider_ID,referential_repair,PRV-946,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00511,encounters,ENC-0000273,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00512,encounters,ENC-0000280,Patient_ID,referential_repair,PAT-900031,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00513,encounters,ENC-0000281,Provider_ID,referential_repair,PRV-921,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00514,encounters,285,Encounter_ID,missing_value_handling,,ENC-9000006,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00515,encounters,ENC-0000293,Patient_ID,referential_repair,PAT-900067,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00516,encounters,ENC-0000304,Patient_ID,referential_repair,PAT-900077,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00517,encounters,304,Encounter_ID,missing_value_handling,,ENC-9000007,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00518,encounters,ENC-0000306,Patient_ID,referential_repair,PAT-900013,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00519,encounters,ENC-0000307,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00520,encounters,ENC-0000328,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00521,encounters,ENC-0000329,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00522,encounters,ENC-0000333,Patient_ID,referential_repair,PAT-900032,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00523,encounters,ENC-0000337,Provider_ID,referential_repair,PRV-928,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00524,encounters,ENC-0000343,Patient_ID,referential_repair,PAT-900040,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00525,encounters,ENC-0000351,Patient_ID,referential_repair,PAT-900037,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00526,encounters,ENC-0000356,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00527,encounters,ENC-0000359,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00528,encounters,ENC-0000364,Patient_ID,referential_repair,PAT-900092,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00529,encounters,ENC-0000371,Patient_ID,referential_repair,PAT-900003,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00530,encounters,371,Encounter_ID,missing_value_handling,,ENC-9000008,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00531,encounters,ENC-0000379,Patient_ID,referential_repair,PAT-900049,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00532,encounters,ENC-0000423,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00533,encounters,ENC-0000424,Encounter_Date,correction,2024-15-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00534,encounters,ENC-0000434,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00535,encounters,ENC-0000441,Provider_ID,referential_repair,PRV-924,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00536,encounters,ENC-0000460,Patient_ID,referential_repair,PAT-900078,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00537,encounters,ENC-0000461,Encounter_ID,deduplication,ENC-0000461,ENC-9000009,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00538,encounters,ENC-0000470,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00539,encounters,ENC-0000473,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00540,encounters,ENC-0000474,Patient_ID,referential_repair,PAT-900006,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00541,encounters,ENC-0000478,Patient_ID,referential_repair,PAT-900087,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00542,encounters,ENC-0000491,Patient_ID,referential_repair,PAT-900081,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00543,encounters,ENC-0000498,Patient_ID,referential_repair,PAT-900070,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00544,encounters,ENC-0000515,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00545,encounters,ENC-0000518,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00546,encounters,543,Encounter_ID,missing_value_handling,,ENC-9000010,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00547,encounters,544,Encounter_ID,missing_value_handling,,ENC-9000011,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00548,encounters,ENC-0000546,Patient_ID,referential_repair,PAT-900062,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00549,encounters,ENC-0000557,Provider_ID,referential_repair,PRV-905,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00550,encounters,ENC-0000569,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00551,encounters,ENC-0000582,Patient_ID,referential_repair,PAT-900034,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00552,encounters,ENC-0000583,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00553,encounters,ENC-0000585,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00554,encounters,ENC-0000597,Provider_ID,referential_repair,PRV-923,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00555,encounters,ENC-0000617,Patient_ID,referential_repair,PAT-900103,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00556,encounters,ENC-0000643,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00557,encounters,ENC-0000646,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00558,encounters,ENC-0000655,Patient_ID,referential_repair,PAT-900107,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00559,encounters,ENC-0000670,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00560,encounters,ENC-0000676,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00561,encounters,ENC-0000678,Patient_ID,referential_repair,PAT-900010,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00562,encounters,ENC-0000681,Patient_ID,referential_repair,PAT-900045,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00563,encounters,ENC-0000686,Patient_ID,referential_repair,PAT-900104,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00564,encounters,ENC-0000687,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00565,encounters,ENC-0000707,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00566,encounters,ENC-0000713,Patient_ID,referential_repair,PAT-900086,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00567,encounters,ENC-0000717,Patient_ID,referential_repair,PAT-900111,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00568,encounters,ENC-0000727,Provider_ID,referential_repair,PRV-937,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00569,encounters,ENC-0000733,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00570,encounters,ENC-0000740,Provider_ID,referential_repair,PRV-936,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00571,encounters,ENC-0000749,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00572,encounters,ENC-0000761,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00573,encounters,ENC-0000763,Patient_ID,referential_repair,PAT-900069,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00574,encounters,ENC-0000767,Patient_ID,referential_repair,PAT-900112,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00575,encounters,ENC-0000773,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00576,encounters,ENC-0000789,Provider_ID,referential_repair,PRV-909,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00577,encounters,ENC-0000790,Patient_ID,referential_repair,PAT-900102,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00578,encounters,ENC-0000792,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00579,encounters,ENC-0000793,Provider_ID,referential_repair,PRV-907,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00580,encounters,ENC-0000796,Provider_ID,referential_repair,PRV-917,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00581,encounters,802,Encounter_ID,missing_value_handling,,ENC-9000012,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00582,encounters,ENC-0000804,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00583,encounters,ENC-0000809,Patient_ID,referential_repair,PAT-900109,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00584,encounters,ENC-0000823,Provider_ID,referential_repair,PRV-910,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00585,encounters,ENC-0000760,Encounter_ID,deduplication,ENC-0000760,ENC-9000013,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00586,encounters,ENC-0000836,Patient_ID,referential_repair,PAT-900001,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00587,encounters,846,Encounter_ID,missing_value_handling,,ENC-9000014,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00588,encounters,ENC-0000848,Patient_ID,referential_repair,PAT-900083,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00589,encounters,867,Encounter_ID,missing_value_handling,,ENC-9000015,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00590,encounters,ENC-0000884,Patient_ID,referential_repair,PAT-900029,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00591,encounters,ENC-0000886,Patient_ID,referential_repair,PAT-900099,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00592,encounters,ENC-0000894,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00593,encounters,ENC-0000898,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00594,encounters,ENC-0000913,Patient_ID,referential_repair,PAT-900042,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00595,encounters,ENC-0000935,Provider_ID,referential_repair,PRV-935,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00596,encounters,ENC-0000938,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00597,encounters,ENC-0000950,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00598,encounters,952,Encounter_ID,missing_value_handling,,ENC-9000016,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00599,encounters,ENC-0000958,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00600,encounters,ENC-0000964,Patient_ID,referential_repair,PAT-900015,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00601,encounters,ENC-0000967,Patient_ID,referential_repair,PAT-900051,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00602,encounters,ENC-0000062,Encounter_ID,deduplication,ENC-0000062,ENC-9000017,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00603,encounters,ENC-0000981,Patient_ID,referential_repair,PAT-900115,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00604,encounters,ENC-0000985,Provider_ID,referential_repair,PRV-917,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00605,encounters,ENC-0000998,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00606,encounters,ENC-0000465,Encounter_ID,deduplication,ENC-0000465,ENC-9000018,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00607,encounters,ENC-0001018,Encounter_ID,deduplication,ENC-0001018,ENC-9000019,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00608,encounters,ENC-0001021,Provider_ID,referential_repair,PRV-908,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00609,encounters,ENC-0001024,Patient_ID,referential_repair,PAT-900012,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00610,encounters,ENC-0001029,Patient_ID,referential_repair,PAT-900054,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00611,encounters,ENC-0001038,Provider_ID,referential_repair,PRV-902,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00612,encounters,ENC-0001065,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00613,encounters,ENC-0001072,Patient_ID,referential_repair,PAT-900053,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00614,encounters,ENC-0001075,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00615,encounters,1081,Encounter_ID,missing_value_handling,,ENC-9000020,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00616,encounters,ENC-0001083,Provider_ID,referential_repair,PRV-911,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00617,encounters,ENC-0001084,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00618,encounters,ENC-0001090,Patient_ID,referential_repair,PAT-900059,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00619,encounters,ENC-0001093,Patient_ID,referential_repair,PAT-900038,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00620,encounters,ENC-0001095,Provider_ID,referential_repair,PRV-915,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00621,encounters,ENC-0001102,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00622,encounters,ENC-0001112,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00623,encounters,ENC-0001118,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00624,encounters,ENC-0001132,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00625,encounters,ENC-0001157,Patient_ID,referential_repair,PAT-900074,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00626,encounters,ENC-0001183,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00627,encounters,ENC-0001197,Provider_ID,referential_repair,PRV-927,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00628,encounters,ENC-0001200,Provider_ID,referential_repair,PRV-930,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00629,encounters,1211,Encounter_ID,missing_value_handling,,ENC-9000021,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00630,encounters,ENC-0001216,Provider_ID,referential_repair,PRV-904,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00631,encounters,ENC-0001217,Patient_ID,referential_repair,PAT-900024,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00632,encounters,ENC-0001219,Provider_ID,referential_repair,PRV-912,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00633,encounters,ENC-0001234,Provider_ID,referential_repair,PRV-938,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00634,encounters,ENC-0001237,Encounter_Date,correction,not-a-date,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00635,encounters,ENC-0001240,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00636,encounters,ENC-0001247,Provider_ID,referential_repair,PRV-900,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00637,encounters,ENC-0001250,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00638,encounters,ENC-0001258,Patient_ID,referential_repair,PAT-900088,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00639,encounters,ENC-0001259,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00640,encounters,ENC-0001267,Provider_ID,referential_repair,PRV-918,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00641,encounters,ENC-0001278,Provider_ID,referential_repair,PRV-931,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00642,encounters,ENC-0001307,Patient_ID,referential_repair,PAT-900089,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00643,encounters,ENC-0001309,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00644,encounters,ENC-0001315,Patient_ID,referential_repair,PAT-900072,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00645,encounters,ENC-0001316,Patient_ID,referential_repair,PAT-900041,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00646,encounters,ENC-0000831,Encounter_ID,deduplication,ENC-0000831,ENC-9000022,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00647,encounters,ENC-0001321,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00648,encounters,ENC-0001325,Provider_ID,referential_repair,PRV-904,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00649,encounters,1326,Encounter_ID,missing_value_handling,,ENC-9000023,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00650,encounters,ENC-0001330,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00651,encounters,ENC-0001338,Patient_ID,referential_repair,PAT-900000,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00652,encounters,ENC-0001342,Patient_ID,referential_repair,PAT-900113,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00653,encounters,1348,Encounter_ID,missing_value_handling,,ENC-9000024,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00654,encounters,ENC-0001364,Patient_ID,referential_repair,PAT-900095,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00655,encounters,ENC-0001369,Patient_ID,referential_repair,PAT-900058,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00656,encounters,1371,Encounter_ID,missing_value_handling,,ENC-9000025,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00657,encounters,ENC-0001373,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00658,encounters,ENC-0001375,Patient_ID,referential_repair,PAT-900093,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00659,encounters,ENC-0001376,Patient_ID,referential_repair,PAT-900098,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00660,encounters,ENC-0001377,Patient_ID,referential_repair,PAT-900082,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00661,encounters,ENC-0001381,Provider_ID,referential_repair,PRV-932,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00662,encounters,ENC-0001382,Provider_ID,referential_repair,PRV-905,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00663,encounters,ENC-0001397,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00664,encounters,ENC-0001407,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00665,encounters,ENC-0001412,Encounter_Date,correction,2024-15-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00666,encounters,ENC-0001413,Patient_ID,referential_repair,PAT-900096,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00667,encounters,1423,Encounter_ID,missing_value_handling,,ENC-9000026,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00668,encounters,ENC-0001446,Provider_ID,referential_repair,PRV-949,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00669,encounters,ENC-0001447,Patient_ID,referential_repair,PAT-900090,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00670,encounters,ENC-0001449,Patient_ID,referential_repair,PAT-900025,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00671,encounters,ENC-0001463,Provider_ID,referential_repair,PRV-906,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00672,encounters,ENC-0001464,Patient_ID,referential_repair,PAT-900050,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00673,encounters,ENC-0001465,Encounter_ID,deduplication,ENC-0001465,ENC-9000027,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00674,encounters,ENC-0001479,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00675,encounters,1480,Encounter_ID,missing_value_handling,,ENC-9000028,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00676,encounters,ENC-0001484,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00677,encounters,ENC-0001490,Encounter_Date,correction,13/40/2024,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00678,encounters,ENC-0001501,Provider_ID,referential_repair,PRV-925,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00679,encounters,ENC-0000366,Encounter_ID,deduplication,ENC-0000366,ENC-9000029,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00680,encounters,ENC-0001515,Patient_ID,referential_repair,PAT-900061,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00681,encounters,ENC-0001529,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00682,encounters,1530,Encounter_ID,missing_value_handling,,ENC-9000030,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00683,encounters,ENC-0001536,Patient_ID,referential_repair,PAT-900016,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00684,encounters,ENC-0001538,Patient_ID,referential_repair,PAT-900079,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00685,encounters,ENC-0001551,Patient_ID,referential_repair,PAT-900030,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00686,encounters,ENC-0001552,Encounter_ID,deduplication,ENC-0001552,ENC-9000031,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00687,encounters,ENC-0001560,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00688,encounters,1562,Encounter_ID,missing_value_handling,,ENC-9000032,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00689,encounters,ENC-0001564,Patient_ID,referential_repair,PAT-900068,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00690,encounters,ENC-0001568,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00691,encounters,ENC-0001570,Patient_ID,referential_repair,PAT-900080,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00692,encounters,ENC-0001572,Provider_ID,referential_repair,PRV-920,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00693,encounters,ENC-0001576,Provider_ID,referential_repair,PRV-929,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00694,encounters,ENC-0001587,Provider_ID,referential_repair,PRV-919,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00695,encounters,ENC-0001598,Patient_ID,referential_repair,PAT-900047,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00696,encounters,ENC-0001607,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00697,encounters,ENC-0001609,Patient_ID,referential_repair,PAT-900019,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00698,encounters,ENC-0001611,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00699,encounters,ENC-0001620,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00700,encounters,ENC-0001629,Patient_ID,referential_repair,PAT-900118,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00701,encounters,ENC-0001635,Provider_ID,referential_repair,PRV-906,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00702,encounters,ENC-0001636,Patient_ID,referential_repair,PAT-900064,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00703,encounters,ENC-0001642,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00704,encounters,ENC-0001650,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00705,encounters,ENC-0001651,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00706,encounters,ENC-0001654,Encounter_Date,correction,2024-15-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00707,encounters,ENC-0001665,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00708,encounters,ENC-0001670,Patient_ID,referential_repair,PAT-900063,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00709,encounters,ENC-0001677,Provider_ID,referential_repair,PRV-913,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00710,encounters,ENC-0001683,Patient_ID,referential_repair,PAT-900004,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00711,encounters,ENC-0001710,Encounter_Date,correction,13/40/2024,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00712,encounters,ENC-0001728,Patient_ID,referential_repair,PAT-900027,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00713,encounters,ENC-0001733,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00714,encounters,ENC-0001747,Patient_ID,referential_repair,PAT-900057,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00715,encounters,ENC-0001752,Patient_ID,referential_repair,PAT-900071,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00716,encounters,ENC-0001754,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00717,encounters,ENC-0001762,Provider_ID,referential_repair,PRV-909,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00718,encounters,ENC-0001771,Encounter_ID,deduplication,ENC-0001771,ENC-9000033,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00719,encounters,ENC-0001814,Provider_ID,referential_repair,PRV-940,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00720,encounters,ENC-0001830,Patient_ID,referential_repair,PAT-900110,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00721,encounters,ENC-0001835,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00722,encounters,ENC-0001850,Patient_ID,referential_repair,PAT-900114,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00723,encounters,ENC-0001864,Provider_ID,referential_repair,PRV-942,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00724,encounters,ENC-0001868,Encounter_Date,correction,not-a-date,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00725,encounters,ENC-0001031,Encounter_ID,deduplication,ENC-0001031,ENC-9000034,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00726,encounters,ENC-0001877,Patient_ID,referential_repair,PAT-900020,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00727,encounters,ENC-0001880,Provider_ID,referential_repair,PRV-929,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00728,encounters,ENC-0001881,Provider_ID,referential_repair,PRV-922,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00729,encounters,ENC-0001894,Encounter_Date,correction,13/40/2024,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00730,encounters,ENC-0001533,Encounter_ID,deduplication,ENC-0001533,ENC-9000035,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00731,encounters,ENC-0001902,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00732,encounters,ENC-0001905,Patient_ID,referential_repair,PAT-900021,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00733,encounters,ENC-0001289,Encounter_ID,deduplication,ENC-0001289,ENC-9000036,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00734,encounters,ENC-0001911,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00735,encounters,ENC-0001921,Provider_ID,referential_repair,PRV-921,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00736,encounters,ENC-0001923,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00737,encounters,1925,Encounter_ID,missing_value_handling,,ENC-9000037,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00738,encounters,ENC-0001930,Patient_ID,referential_repair,PAT-900065,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00739,encounters,ENC-0001937,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00740,encounters,ENC-0001938,Provider_ID,referential_repair,PRV-907,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00741,encounters,ENC-0001950,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00742,encounters,ENC-0001961,Encounter_ID,deduplication,ENC-0001961,ENC-9000038,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00743,encounters,ENC-0001969,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00744,encounters,ENC-0001971,Patient_ID,referential_repair,PAT-900066,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00745,encounters,ENC-0001976,Patient_ID,referential_repair,PAT-900084,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00746,encounters,ENC-0001999,Provider_ID,referential_repair,PRV-939,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00747,encounters,ENC-0002005,Patient_ID,referential_repair,PAT-900033,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00748,encounters,ENC-0002010,Provider_ID,referential_repair,PRV-908,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00749,encounters,ENC-0002015,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00750,encounters,ENC-0002018,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00751,encounters,ENC-0002020,Provider_ID,referential_repair,PRV-926,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00752,encounters,ENC-0002031,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00753,encounters,ENC-0002036,Encounter_Date,correction,not-a-date,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00754,encounters,ENC-0002037,Provider_ID,referential_repair,PRV-900,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00755,encounters,ENC-0002038,Patient_ID,referential_repair,PAT-900101,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00756,encounters,ENC-0002042,Provider_ID,referential_repair,PRV-910,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00757,encounters,ENC-0002050,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00758,encounters,ENC-0002057,Provider_ID,referential_repair,PRV-945,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00759,encounters,ENC-0002061,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00760,encounters,ENC-0002069,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00761,encounters,ENC-0002079,Patient_ID,referential_repair,PAT-900052,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00762,encounters,ENC-0002084,Patient_ID,referential_repair,PAT-900055,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00763,encounters,ENC-0002087,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00764,encounters,ENC-0002096,Patient_ID,referential_repair,PAT-900108,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00765,encounters,ENC-0002098,Provider_ID,referential_repair,PRV-925,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00766,encounters,ENC-0002108,Provider_ID,referential_repair,PRV-943,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00767,encounters,ENC-0002111,Patient_ID,referential_repair,PAT-900094,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00768,encounters,ENC-0002125,Patient_ID,referential_repair,PAT-900100,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00769,encounters,ENC-0002128,Patient_ID,referential_repair,PAT-900119,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00770,encounters,ENC-0002130,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00771,encounters,ENC-0002149,Encounter_Date,correction,2027-11-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00772,encounters,ENC-0002153,Facility_ID,referential_repair,FAC-999,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00773,encounters,ENC-0002170,Provider_ID,referential_repair,PRV-947,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00774,encounters,ENC-0002180,Provider_ID,referential_repair,PRV-923,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00775,encounters,ENC-0002192,Provider_ID,referential_repair,PRV-916,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00776,encounters,ENC-0002205,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00777,encounters,ENC-0002206,Patient_ID,referential_repair,PAT-900075,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00778,encounters,ENC-0002210,Patient_ID,referential_repair,PAT-900023,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00779,encounters,ENC-0002218,Provider_ID,referential_repair,PRV-934,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00780,encounters,ENC-0002232,Patient_ID,referential_repair,PAT-900043,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00781,encounters,ENC-0002233,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00782,encounters,ENC-0000054,Encounter_ID,deduplication,ENC-0000054,ENC-9000039,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00783,encounters,ENC-0002245,Provider_ID,referential_repair,PRV-914,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00784,encounters,ENC-0002249,Patient_ID,referential_repair,PAT-900085,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00785,encounters,ENC-0002250,Patient_ID,referential_repair,PAT-900105,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00786,encounters,ENC-0002256,Patient_ID,referential_repair,PAT-900018,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00787,encounters,2259,Encounter_ID,missing_value_handling,,ENC-9000040,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00788,encounters,ENC-0002267,Patient_ID,referential_repair,PAT-900117,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00789,encounters,ENC-0002268,Patient_ID,referential_repair,PAT-900011,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00790,encounters,ENC-0002274,Provider_ID,referential_repair,PRV-916,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00791,encounters,ENC-0002281,Patient_ID,referential_repair,PAT-900036,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00792,encounters,ENC-0002296,Patient_ID,referential_repair,PAT-900056,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00793,encounters,ENC-0002299,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00794,encounters,ENC-0002324,Facility_ID,referential_repair,FAC-000,FAC-UNK,Unmatched encounter facility reference assigned to Unknown facility.
+REM-00795,encounters,ENC-0002330,Provider_ID,referential_repair,PRV-926,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00796,encounters,ENC-0002335,Encounter_Date,correction,2024-15-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00797,encounters,ENC-0002340,Provider_ID,referential_repair,PRV-928,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00798,encounters,2350,Encounter_ID,missing_value_handling,,ENC-9000041,Assigned a new synthetic Encounter_ID for a blank identifier.
+REM-00799,encounters,ENC-0002356,Patient_ID,referential_repair,PAT-900097,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00800,encounters,ENC-0002362,Patient_ID,referential_repair,,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00801,encounters,ENC-0002365,Patient_ID,referential_repair,PAT-900008,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00802,encounters,ENC-0002377,Provider_ID,referential_repair,PRV-914,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00803,encounters,ENC-0002379,Encounter_ID,deduplication,ENC-0002379,ENC-9000042,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00804,encounters,ENC-0002382,Patient_ID,referential_repair,PAT-900091,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00805,encounters,ENC-0002389,Patient_ID,referential_repair,PAT-900022,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00806,encounters,ENC-0002390,Patient_ID,referential_repair,PAT-900035,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00807,encounters,ENC-0002392,Encounter_ID,deduplication,ENC-0002392,ENC-9000043,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00808,encounters,ENC-0002403,Provider_ID,referential_repair,PRV-912,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00809,encounters,ENC-0002410,Encounter_Date,correction,2024-15-01,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00810,encounters,ENC-0002427,Provider_ID,referential_repair,PRV-922,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00811,encounters,ENC-0002442,Encounter_ID,deduplication,ENC-0002442,ENC-9000044,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00812,encounters,ENC-0002448,Provider_ID,referential_repair,PRV-919,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00813,encounters,ENC-0002451,Encounter_ID,deduplication,ENC-0002451,ENC-9000045,Duplicate Encounter_ID reassigned to preserve uniqueness without dropping the clinical event row.
+REM-00814,encounters,ENC-0002455,Provider_ID,referential_repair,PRV-944,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00815,encounters,ENC-0002458,Patient_ID,referential_repair,PAT-900044,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00816,encounters,ENC-0002461,Patient_ID,referential_repair,PAT-900009,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00817,encounters,ENC-0002469,Provider_ID,referential_repair,PRV-933,PRV-UNK,Unmatched provider reference assigned to Unknown provider.
+REM-00818,encounters,ENC-0002475,Patient_ID,referential_repair,PAT-900046,PAT-UNK,Orphan encounter linked to a single Unknown patient master record rather than being deleted.
+REM-00819,encounters,ENC-0002476,Encounter_Date,correction,13/40/2024,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.
+REM-00820,encounters,ENC-0002494,Encounter_Date,correction,not-a-date,,Unparseable or future encounter date cleared. No source system exists to impute a replacement.

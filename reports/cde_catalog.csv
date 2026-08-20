@@ -1,0 +1,8 @@
+cde_id,data_element,definition,domain,owner,steward,classification,criticality,source_dataset
+CDE-001,Patient_ID,Synthetic unique identifier assigned to a fabricated patient record.,Patient,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Confidential (synthetic demonstration label),High,patients
+CDE-002,Date_of_Birth,Synthetic date of birth used to test date validity and completeness.,Patient,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Confidential (synthetic demonstration label),High,patients
+CDE-003,Gender,Synthetic administrative gender constrained to an approved value set.,Patient,Chief Data Officer (Synthetic),Patient Master Data Steward (Synthetic),Confidential (synthetic demonstration label),Medium,patients
+CDE-004,Facility_ID,Synthetic identifier of the facility associated with a record.,Facility,Chief Data Officer (Synthetic),Facility Reference Data Steward (Synthetic),Internal (synthetic demonstration label),High,patients / encounters / facilities
+CDE-005,Provider_ID,Synthetic identifier of the care provider associated with an encounter.,Provider,Chief Data Officer (Synthetic),Provider Master Data Steward (Synthetic),Internal (synthetic demonstration label),High,providers / encounters
+CDE-006,Encounter_ID,Synthetic unique identifier assigned to a fabricated encounter record.,Encounter,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),Confidential (synthetic demonstration label),High,encounters
+CDE-007,Encounter_Date,Synthetic date on which a fabricated encounter occurred.,Encounter,Chief Data Officer (Synthetic),Clinical Data Steward (Synthetic),Confidential (synthetic demonstration label),Medium,encounters

@@ -1,0 +1,6 @@
+dataset,column,datatype,row_count,null_count,completeness_pct,unique_count,uniqueness_pct,duplicate_count,min,max,invalid_values,top_values
+providers,Provider_ID,string,40,1,97.5,39,100.0,0,PRV-001,prv-009,,PRV-001 (1); PRV-002 (1); PRV-003 (1); PRV-004 (1); PRV-005 (1)
+providers,Provider_Name,string,40,0,100.0,40,100.0,0,SYNTH_PROVIDER_001,SYNTH_PROVIDER_040,,SYNTH_PROVIDER_001 (1); SYNTH_PROVIDER_002 (1); SYNTH_PROVIDER_003 (1); SYNTH_PROVIDER_004 (1); SYNTH_PROVIDER_005 (1)
+providers,Specialty,string,40,0,100.0,5,12.5,35,Cardiology,Paediatrics,,General Practice (8); Cardiology (8); Paediatrics (8); Emergency Medicine (8); Internal Medicine (8)
+providers,Facility_ID,string,40,0,100.0,13,32.5,27,FAC-001,FAC-99,,FAC-001 (4); FAC-002 (4); FAC-003 (4); FAC-004 (4); FAC-005 (3)
+providers,Dataset_Classification,string,40,0,100.0,1,2.5,39,Synthetic / Illustrative / Non-production,Synthetic / Illustrative / Non-production,,Synthetic / Illustrative / Non-production (40)

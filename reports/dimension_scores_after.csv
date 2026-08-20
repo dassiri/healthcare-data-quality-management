@@ -1,0 +1,6 @@
+dimension,rules,records_checked,passed,failed,score
+Completeness,1,1001,1001,0,100.0
+Consistency,1,1001,1001,0,100.0
+Referential Integrity,4,8501,8501,0,100.0
+Uniqueness,1,1001,1001,0,100.0
+Validity,2,3345,3345,0,100.0

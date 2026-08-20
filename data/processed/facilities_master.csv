@@ -1,0 +1,14 @@
+Facility_ID,Facility_Name,Facility_Type,Region,Is_Active,Dataset_Classification
+FAC-001,SYNTH_FACILITY_001,Primary Care,North,Y,Synthetic / Illustrative / Non-production
+FAC-002,SYNTH_FACILITY_002,Hospital,South,Y,Synthetic / Illustrative / Non-production
+FAC-003,SYNTH_FACILITY_003,Specialty Clinic,East,Y,Synthetic / Illustrative / Non-production
+FAC-004,SYNTH_FACILITY_004,Emergency Centre,West,Y,Synthetic / Illustrative / Non-production
+FAC-005,SYNTH_FACILITY_005,Primary Care,Central,Y,Synthetic / Illustrative / Non-production
+FAC-006,SYNTH_FACILITY_006,Hospital,North,Y,Synthetic / Illustrative / Non-production
+FAC-007,SYNTH_FACILITY_007,Specialty Clinic,South,Y,Synthetic / Illustrative / Non-production
+FAC-008,SYNTH_FACILITY_008,Emergency Centre,East,Y,Synthetic / Illustrative / Non-production
+FAC-009,SYNTH_FACILITY_009,Primary Care,West,Y,Synthetic / Illustrative / Non-production
+FAC-010,SYNTH_FACILITY_010,Hospital,Central,Y,Synthetic / Illustrative / Non-production
+FAC-011,SYNTH_FACILITY_011,Specialty Clinic,North,Y,Synthetic / Illustrative / Non-production
+FAC-012,SYNTH_FACILITY_012,Emergency Centre,South,Y,Synthetic / Illustrative / Non-production
+FAC-UNK,SYNTH_FACILITY_UNKNOWN,Unknown,Unknown,N,Synthetic / Illustrative / Non-production

@@ -1,0 +1,111 @@
+# Synthetic / Illustrative / Non-production Data Quality rule catalog.
+# Logic documented here is implemented in src/quality_rules/engine.py.
+
+rules:
+  - rule_id: DQ-001
+    rule_name: Patient ID Completeness
+    dimension: Completeness
+    description: Patient_ID must not be null or blank.
+    logic: Fail when Patient_ID is null, empty, or whitespace-only.
+    severity: High
+    cde: CDE-001
+    data_element: Patient_ID
+    dataset: patients
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+
+  - rule_id: DQ-002
+    rule_name: Patient ID Uniqueness
+    dimension: Uniqueness
+    description: Populated Patient_ID values must be unique after trimming whitespace.
+    logic: Among non-null Patient_ID values, fail every row whose identifier occurs more than once.
+    severity: High
+    cde: CDE-001
+    data_element: Patient_ID
+    dataset: patients
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+
+  - rule_id: DQ-003
+    rule_name: Date of Birth Validity
+    dimension: Validity
+    description: Date of Birth must be a parseable date, not in the future, and within a plausible range.
+    logic: When Date_of_Birth is populated, pass if it parses to a date between 1900-01-01 and the project as-of date (2026-08-20). Blank values are completeness issues, not validity failures.
+    severity: High
+    cde: CDE-002
+    data_element: Date_of_Birth
+    dataset: patients
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+
+  - rule_id: DQ-004
+    rule_name: Gender Conformity
+    dimension: Consistency
+    description: Gender must match the approved value set exactly.
+    logic: Pass when Gender is one of Female, Male, Unknown.
+    severity: Medium
+    cde: CDE-003
+    data_element: Gender
+    dataset: patients
+    owner: Chief Data Officer (Synthetic)
+    steward: Patient Master Data Steward (Synthetic)
+
+  - rule_id: DQ-005
+    rule_name: Facility Referential Integrity
+    dimension: Referential Integrity
+    description: Patient.Facility_ID must exist in the facility master reference dataset.
+    logic: Fail when Facility_ID is null or does not match facilities_master.Facility_ID.
+    severity: High
+    cde: CDE-004
+    data_element: Facility_ID
+    dataset: patients
+    owner: Chief Data Officer (Synthetic)
+    steward: Facility Reference Data Steward (Synthetic)
+
+  - rule_id: DQ-006
+    rule_name: Encounter Patient Referential Integrity
+    dimension: Referential Integrity
+    description: Encounter.Patient_ID must exist in the patient dataset.
+    logic: Fail when Encounter.Patient_ID is null or not present in patients.Patient_ID.
+    severity: High
+    cde: CDE-001
+    data_element: Patient_ID
+    dataset: encounters
+    owner: Chief Data Officer (Synthetic)
+    steward: Clinical Data Steward (Synthetic)
+
+  - rule_id: DQ-007
+    rule_name: Encounter Provider Referential Integrity
+    dimension: Referential Integrity
+    description: Encounter.Provider_ID must exist in the provider dataset.
+    logic: Fail when Encounter.Provider_ID is null or not present in providers.Provider_ID.
+    severity: High
+    cde: CDE-005
+    data_element: Provider_ID
+    dataset: encounters
+    owner: Chief Data Officer (Synthetic)
+    steward: Provider Master Data Steward (Synthetic)
+
+  - rule_id: DQ-008
+    rule_name: Encounter Facility Referential Integrity
+    dimension: Referential Integrity
+    description: Encounter.Facility_ID must exist in the facility master reference dataset.
+    logic: Fail when Encounter.Facility_ID is null or does not match facilities_master.Facility_ID.
+    severity: High
+    cde: CDE-004
+    data_element: Facility_ID
+    dataset: encounters
+    owner: Chief Data Officer (Synthetic)
+    steward: Facility Reference Data Steward (Synthetic)
+
+  - rule_id: DQ-009
+    rule_name: Encounter Date Validity
+    dimension: Validity
+    description: Encounter_Date must be a parseable date and cannot be in the future.
+    logic: When Encounter_Date is populated, pass if it parses to a date on or before the project as-of date (2026-08-20). Blank values are completeness issues, not validity failures.
+    severity: Medium
+    cde: CDE-007
+    data_element: Encounter_Date
+    dataset: encounters
+    owner: Chief Data Officer (Synthetic)
+    steward: Clinical Data Steward (Synthetic)

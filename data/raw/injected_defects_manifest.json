@@ -1,0 +1,41 @@
+{
+  "notice": "SYNTHETIC DATASET. Illustrative and non-production. Contains no real patient, provider, or facility information.",
+  "seed": 42,
+  "as_of_date": "2026-08-20",
+  "classification": "Synthetic / Illustrative / Non-production",
+  "patients": {
+    "missing_patient_id_rows": 80,
+    "duplicate_patient_id_pairs": 40,
+    "inconsistent_patient_id_format_rows": 35,
+    "missing_dob_rows": 50,
+    "future_dob_rows": 25,
+    "malformed_dob_rows": 30,
+    "out_of_range_dob_rows": 15,
+    "missing_gender_rows": 40,
+    "invalid_gender_rows": 55,
+    "missing_facility_id_rows": 35,
+    "invalid_facility_id_rows": 40,
+    "exact_duplicate_patient_rows_appended": 20,
+    "final_patient_row_count": 1020
+  },
+  "encounters": {
+    "orphan_patient_id_rows": 120,
+    "orphan_provider_id_rows": 80,
+    "orphan_facility_id_rows": 70,
+    "missing_encounter_id_rows": 25,
+    "duplicate_encounter_id_pairs": 20,
+    "future_encounter_date_rows": 20,
+    "malformed_encounter_date_rows": 15,
+    "missing_encounter_patient_id_rows": 30,
+    "final_encounter_row_count": 2500
+  },
+  "providers": {
+    "row_count": 40,
+    "injected_format_or_missing_ids": 3,
+    "invalid_facility_references": 1
+  },
+  "facilities_raw": {
+    "row_count": 12,
+    "inconsistent_formatting_rows": 2
+  }
+}

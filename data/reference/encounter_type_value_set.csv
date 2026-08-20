@@ -1,0 +1,5 @@
+Value,Description,Is_Approved,Dataset_Classification
+Emergency,Emergency,Y,Synthetic / Illustrative / Non-production
+Inpatient,Inpatient,Y,Synthetic / Illustrative / Non-production
+Outpatient,Outpatient,Y,Synthetic / Illustrative / Non-production
+Virtual,Virtual,Y,Synthetic / Illustrative / Non-production

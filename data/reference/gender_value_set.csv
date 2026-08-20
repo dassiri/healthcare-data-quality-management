@@ -1,0 +1,4 @@
+Value,Description,Is_Approved,Dataset_Classification
+Female,Female,Y,Synthetic / Illustrative / Non-production
+Male,Male,Y,Synthetic / Illustrative / Non-production
+Unknown,Not specified / unknown,Y,Synthetic / Illustrative / Non-production
