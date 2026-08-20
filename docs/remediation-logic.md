@@ -26,4 +26,14 @@ Every change is appended to `reports/remediation_log.csv` with the previous valu
 | Referential repair | Unmatched facility and provider keys are assigned to `FAC-UNK` / `PRV-UNK` placeholders that are added to the processed reference tables. Orphan encounters are linked to a single `PAT-UNK` unknown patient master record instead of being deleted. |
 | Correction | Dates that are unparseable, in the future, or before 1900-01-01 are cleared. No replacement date is invented. Unmatched gender values default to `Unknown`. |
 
-Residual validity failures after remediation are expected for dates that cannot be reconstructed without a source system.
+## Methodological limits of placeholder assignment
+
+`FAC-UNK`, `PRV-UNK`, and `PAT-UNK` are synthetic placeholders. They restore **structural / referential integrity** for this portfolio demonstration so unmatched keys can pass the implemented referential-integrity rules without silent row deletion.
+
+They do **not**:
+
+- establish business accuracy
+- recover missing source-of-truth information
+- identify the real facility, provider, or patient that should have been recorded
+
+A 100% rule-pass score after remediation means every implemented rule passed on the remediated dataset. It does not mean the dataset is universally complete, clinically accurate, or fit for every business purpose. Invalid dates that cannot be reconstructed are cleared rather than invented; those blanks remain in the processed files and are visible in profiling.

@@ -154,7 +154,11 @@ Overall Data Quality Score: **100.00%**
 | DQ-008 | 2500 | 2500 | 0 | 100.00 |
 | DQ-009 | 2465 | 2465 | 0 | 100.00 |
 
-All nine rules improved. The 100% after-score means the executable rules passed on the remediated dataset. Invalid dates were **cleared, not invented**, so they leave the validity denominator. Processed patients still contain blank dates of birth (visible in profiling) because no source system exists to replace them.
+All nine rules improved. The 100% after-score means all implemented rules passed on the remediated dataset. It does **not** mean the dataset is universally complete, clinically accurate, or fit for every business purpose.
+
+Synthetic placeholders such as `FAC-UNK`, `PRV-UNK`, and `PAT-UNK` restore structural / referential integrity for this portfolio demonstration. They do not establish business accuracy or recover missing source-of-truth information.
+
+Invalid dates were **cleared, not invented**, so they leave the validity denominator. Processed patients still contain blank dates of birth (visible in profiling) because no source system exists to replace them.
 
 Improvement: **+6.43 percentage points**.
 
@@ -176,6 +180,8 @@ Generated outputs:
 - No real healthcare data
 - No organisational implementation
 - No regulatory compliance claim
+- Placeholder IDs (`FAC-UNK`, `PRV-UNK`, `PAT-UNK`) restore referential structure only; they are not source-of-truth recovery
+- A 100% rule-pass score is limited to the implemented rules on the remediated synthetic dataset
 
 Issue statuses (`Open`, `In Progress`, `Resolved`, `Closed`) are a portfolio simulation.
 
